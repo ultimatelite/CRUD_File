@@ -35,7 +35,7 @@ class CRUD extends Object {
       stdout.write(text + " (y/n): ");
       choice = stdin.readLineSync();
     }
-    return choice == "y";
+    return choice.toString().toLowerCase() == "y";
   }
 
   static int getNumber(List<String> key) {
@@ -206,10 +206,28 @@ class CRUD extends Object {
     }
   }
 
+  static void findData(String name) {
+    if (CRUD.checkData([name], true)) {
+      print("data found, collecting data...");
+      List<String> data = getResult();
+      print(
+          "--------------------------------------------------------------------------------------------------------");
+      print("No \t\t|\t Name \t\t|\t Hobby \t\t\t|");
+      print(
+          "--------------------------------------------------------------------------------------------------------");
+      print("${data[0]} \t\t|\t ${data[1]} \t\t|\t ${data[2]} \t\t|");
+      print(
+          "--------------------------------------------------------------------------------------------------------");
+      _resultOfCheck.clear();
+    } else {
+      print("data not found");
+    }
+  }
+
   static void getTable() {
     int choice = 0;
     stdout.write(
-        "Options:\n1. Create \n2. Read \n3. Update \n4. Delete \n5. Reset \n6. Exit\nchoose: ");
+        "Options:\n1. Create \n2. Read \n3. Update \n4. Delete \n5. Search \n6. Reset \n7. Exit\nchoose: ");
     try {
       choice = int.parse(stdin.readLineSync().toString());
     } catch (e) {
@@ -238,6 +256,10 @@ class CRUD extends Object {
         deleteData(no);
         break;
       case 5:
+        String name = getInput("Put name: ");
+        findData(name);
+        break;
+      case 6:
         if (getChoice(
             "Do you want to reset database? (your previous data will be lost)")) {
           resetDb();
@@ -246,7 +268,7 @@ class CRUD extends Object {
           stdout.writeln("Database reset aborted!");
         }
         break;
-      case 6:
+      case 7:
         exit(0);
       default:
         print("No matching case for: \"${choice}\"");

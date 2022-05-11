@@ -1,5 +1,11 @@
-# Lua
-Lua is a fast multi-paradigm embeddable scripting language, used for minimized program, like game engine scripting language, etc.
+# CRUD_File
+This project aimed to cover most of programming language File CRUDF (Create Read Update Delete Find) operations.
 
-# Disclaimer
-this does not work on Roblox Studio Lua Implementation! please do not try this script.
+# License
+This project is licensed under the terms of MIT Licese, which means you can copy the whole code without any restrictions, from re-distribute or commercial use.
+
+# Guides
+check out (guides) folder and find the file you've needed.
+
+# Languages
+currently added for dart and lua

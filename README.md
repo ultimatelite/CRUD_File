@@ -9,3 +9,6 @@ check out (guides) folder and find the file you've needed.
 
 # Languages
 currently added for dart and lua
+
+# Warnings
+every original commit has NO COMMENTS on the file, please understand the script context and make a comment for yourself or merge request to show contribution.

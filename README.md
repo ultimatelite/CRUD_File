@@ -1,9 +1,5 @@
-# CRUD_File
-Covering most of File CRUD Operations on certain programming language
+# Lua
+Lua is a fast multi-paradigm embeddable scripting language, used for minimized program, like game engine scripting language, etc.
 
-# Guide
-each branch contains code for specific programming language, with warning: there is NO comment every original push (no merge)
-
-# License
-this project is licensed under the terms of Apache-2.0 License, which means, you can modify the code your own use or redistribute it or merging it to the main repository
-without any restrictions
+# Disclaimer
+this does not work on Roblox Studio Lua Implementation! please do not try this script.

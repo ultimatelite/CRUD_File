@@ -59,7 +59,7 @@ function CRUD:getInput(a)
     return io.read()
 end
 function CRUD:getNumber(key)
-    return tonumber(self:checkExist(key, true) ~= nil and self:checkExist(key, true)[1]) or 0
+    return tonumber(self:checkExist(key, true) ~= nil and self:checkExist(key, true)[1] or 0)
 end
 function CRUD:checkExist(key, directDisplay)
     local file = io.open("database.dat", "r")

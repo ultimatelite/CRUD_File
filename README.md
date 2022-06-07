@@ -8,7 +8,7 @@ This project is licensed under the terms of MIT Licese, which means you can copy
 check out (guides) folder and find the file you've needed.
 
 # Languages
-currently added for dart, lua, C++, C# and Java
+currently added for dart, lua, C++, C#, Java and Python
 
 # Warnings
 every original commit has NO COMMENTS on the file, please understand the script context and make a comment for yourself.

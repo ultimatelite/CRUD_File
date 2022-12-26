@@ -202,7 +202,7 @@ void update_data(Database* db, Database* tmp, char* name, char* nname, char* nho
         char* nh = tok[2];
         char* lwr = strlwr(nn);
         
-        if(strcmp(nn, lwrx) == 0){
+        if(strcmp(lwr, lwrx) == 0){
             printf("Data Summary\n (%s, %s) -> (%s, %s)\n", nn, nh, nname, nhobby);
             if(getchoice("Continue?")){
                 if(!database_data_exist(db, getnn)){

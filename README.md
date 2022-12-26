@@ -8,7 +8,11 @@ This project is licensed under the terms of MIT Licese, which means you can copy
 check out (guides) folder and find the file you've needed.
 
 # Languages
-currently added for dart, lua, C++, C#, Java, Python, and Rust.
+Supported language: `dart, lua, C++, C#, Java, Python, Rust, and C.`
+
+Currently added: `C`
+
+When: `27 December 2022 12:47 AM`
 
 # Warnings
 every original commit has NO COMMENTS on the file, please understand the script context and make a comment for yourself.

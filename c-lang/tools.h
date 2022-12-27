@@ -205,13 +205,16 @@ void update_data(Database* db, Database* tmp, char* name, char* nname, char* nho
         if(strcmp(lwr, lwrx) == 0){
             printf("Data Summary\n (%s, %s) -> (%s, %s)\n", nn, nh, nname, nhobby);
             if(getchoice("Continue?")){
-                if(!database_data_exist(db, getnn)){
-                    nn = getnn;
-                    nh = getnh;
-                    printf("Data updated.\n");
+                char* fmt = (char*)malloc(strlen(getnn) + strlen(getnh));
+                sprintf(fmt, "%s,%s", getnn, getnh);
+                if(database_data_exist(db, fmt)){
+                    printf("Data existed.\n");
                 }else{
-                    printf("Data existed\n");
+                    nh = getnh;
+                    nn = getnn;
+                    printf("Data updated.\n");
                 }
+                free(fmt);
             }else{
                 printf("Abort.\n");
             }
@@ -249,11 +252,13 @@ void find_data(Database* db, char* name){
     char** fz = tokenize(x, "\n", sz);
     char* lwr = strlwr(name);
     for(int i = 0; i < sz; i++){
-        if(strstr(fz[i], lwr) != NULL){
-            char** tok = tokenize(fz[i], ",", 3);
+        char** tok = tokenize(fz[i], ",", 3);
+        char* lwrd = strlwr(tok[1]);
+        if(strcmp(lwrd, lwr) == 0){
             printf("%s: %s, %s", tok[0], tok[1], tok[2]);
-            free_string(tok, sz);
         }
+        free(lwrd);
+        free_string(tok, 3);
     }
     free(lwr);
     free_string(fz, sz);

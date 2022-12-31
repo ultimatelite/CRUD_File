@@ -18,4 +18,4 @@ When: `27 December 2022 12:47 AM`
 every original commit has NO COMMENTS on the file, please understand the script context and make a comment for yourself.
 
 # Contribution
-make a pull request, if it's accepted there will be a folder on certain branches named "refactored {NAME}".
+go to a specific branch, create a folder named "refactor {Your Commit Name}" then pull request on that branch

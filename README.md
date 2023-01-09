@@ -8,11 +8,11 @@ This project is licensed under the terms of MIT Licese, which means you can copy
 check out (guides) folder and find the file you've needed.
 
 # Languages
-Supported language: `dart, lua, C++, C#, Java, Python, Rust, and C.`
+Supported language: `dart, lua, C++, C#, Java, Python, Rust, C, and Ruby`
 
-Currently added: `C`
+Currently added: `Ruby`
 
-When: `27 December 2022 12:47 AM`
+When: `10 January 2023 1:12 AM`
 
 # Warnings
 every original commit has NO COMMENTS on the file, please understand the script context and make a comment for yourself.
